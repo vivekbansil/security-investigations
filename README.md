@@ -4,13 +4,14 @@ This repository contains high-level investigation summaries from structured secu
 
 These investigations emphasize:
 
-- Alert triage and structured investigation workflows
-- Log, IDS, and artifact correlation
-- Network packet analysis (PCAP review)
-- Authentication monitoring and credential abuse detection
-- Web exploitation impact assessment
-- Persistence identification (e.g., SSH key abuse)
-- Analytical reasoning and clear documentation
+- Alert triage and structured investigation workflows  
+- Log, IDS, and artifact correlation  
+- Network packet analysis (PCAP review)  
+- Authentication monitoring and credential abuse detection  
+- Web exploitation impact assessment  
+- Lateral movement identification and tracking  
+- Persistence mechanisms and backdoor behavior  
+- Analytical reasoning and clear documentation  
 
 All investigations were performed in controlled lab environments (Hack The Box Sherlocks). These summaries intentionally avoid walkthroughs, flags, or exploit steps. Instead, they focus on investigative methodology, evidence interpretation, and defensible conclusions—mirroring entry-level SOC analysis practices.
 
@@ -23,4 +24,5 @@ This repository is intended as a learning portfolio and skill-development record
 - **PhishNet** – Phishing activity and email security investigation  
 - **GhostTrace** – Endpoint artifact analysis and suspicious process behavior  
 - **Packet Puzzle** – Network traffic inspection and packet-level analysis  
-- **Meerkat** – Web exploitation analysis, credential abuse detection, and SSH persistence investigation
+- **Meerkat** – Web exploitation analysis, credential abuse detection, and SSH persistence investigation  
+- **JustSomePages** – Multi-stage web intrusion involving web shell exploitation, lateral movement, and persistence across internal systems  
