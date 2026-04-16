@@ -1,16 +1,16 @@
-Investigation Summary – JustSomePages
+# Investigation Summary – JustSomePages
 
-Scenario Overview  
+## Scenario Overview  
 This investigation simulated a multi-stage intrusion involving a compromised web application and subsequent attacker movement across internal systems. The objective was to analyze network traffic, system logs, and application behavior to reconstruct the attack chain from initial access through persistence.
 
-Artifacts Analyzed  
+## Artifacts Analyzed  
 - Packet capture (PCAP) data  
 - Windows Event Logs (EVTX)  
 - HTTP request and response activity  
 - Command execution artifacts  
 - Web application and web shell behavior  
 
-Analytical Process  
+## Analytical Process  
 The investigation began by analyzing HTTP traffic in the PCAP, where suspicious requests revealed the presence of a JSP-based web shell on a public-facing Tomcat server. These requests contained command parameters and returned system output, indicating remote command execution through the web application.
 
 After confirming initial access, analysis focused on understanding the attacker’s activity on the compromised system. Command execution patterns (e.g., system enumeration and directory navigation) were identified through HTTP traffic and log artifacts, confirming elevated access and active system interaction.
@@ -23,12 +23,12 @@ Using this access, the attacker explored the file system and uploaded an ASPX we
 
 Events were reconstructed chronologically to map the progression from initial web exploitation through lateral movement, persistence, and continued access.
 
-Findings  
+## Findings  
 Correlated evidence confirmed that the attacker successfully exploited a public-facing web application to deploy a JSP web shell and gain remote command execution. The attacker performed system enumeration, pivoted to an internal host using WMIC, and established persistence through a PowerShell-based backdoor.
 
 Additional web shells were deployed within the IIS web root, allowing continued access and control over the system. Observed behavior aligned with common adversary techniques including exploitation of public-facing applications, web shell usage, remote command execution, lateral movement, tool transfer, and HTTP-based command-and-control.
 
-Lessons Learned  
+## Lessons Learned  
 This investigation reinforced the importance of:
 
 - Identifying web shell behavior in HTTP traffic  
